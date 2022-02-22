@@ -12,7 +12,7 @@
 }
 
 .headerTitle:hover {
-  color: rgba(72, 202, 228);
+  color: rgb(72, 202, 228);
 }
 
 .navLinks {
@@ -34,6 +34,10 @@
   background-color: rgba(72, 202, 228, 0.3);
 }
 
+.dropdown-btn {
+  display: none;
+}
+
 @media (max-width: 752px) {
   .header {
     font-size: 0.8rem;
@@ -51,6 +55,7 @@
   .header {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
   }
   .navLinks {
     width: 20rem;
@@ -58,5 +63,48 @@
   }
   .headerTitle {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    display: none;
+  }
+  .navLinks {
+    display: none;
+  }
+  .header-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(72, 202, 228);
+    color: #03045e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+    margin-bottom: 0;
+  }
+  .headerTitle {
+    margin-left: 1rem;
+    margin-bottom: 0.8rem;
+    height: 3rem;
+    transition: color 0.3s ease-in-out;
+  }
+  .headerTitle:hover {
+    color: white;
+  }
+  .dropdown-btn {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-bottom: 0.6rem;
+    height: 3rem;
+  }
+  .dropdown-btn img {
+    cursor: pointer;
   }
 }

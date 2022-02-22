@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   animation: home-appear 1s ease-out forwards;
+  padding-bottom: 10.5rem;
 }
 
 .image-section {
@@ -11,6 +12,8 @@
 
 .home img {
   width: 25rem;
+  border: 0.4rem solid #00b4d8;
+  border-radius: 210px;
 }
 
 .intro {
@@ -18,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #03045e;
 }
@@ -27,10 +30,14 @@
   color: #00b4d8;
 }
 
+.intro div {
+  line-height: 3rem;
+}
+
 @media (max-width: 1300px) {
   .intro {
     width: 40rem;
-    font-size: 2.2rem;
+    font-size: 1.7rem;
   }
   .home img {
     width: 20rem;
@@ -53,7 +60,19 @@
 @media (max-width: 752px) {
   .intro {
     width: 55rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .intro div {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-section {
+    margin-top: 4rem;
   }
 }
 
