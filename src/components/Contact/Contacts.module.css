@@ -66,6 +66,12 @@
   cursor: pointer;
 }
 
+@media (min-width: 500px) and (max-width: 696px) {
+  .contacts-section {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 500px) {
   .contacts-section {
     flex-direction: column;
