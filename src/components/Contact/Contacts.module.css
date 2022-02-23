@@ -1,11 +1,73 @@
 .contacts-section {
-  display: none;
+  display: flex;
   justify-content: center;
   background-color: #03045e;
+  flex-wrap: wrap;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  text-decoration: none;
+  color: white;
+  margin-left: 1.5rem;
+}
+
+.link h3 {
+  margin-bottom: 0;
+}
+
+.link p {
+  transition: color 0.3s ease-in-out;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.link:hover p {
+  color: rgb(72, 202, 228);
+}
+
+.contacts-section .contacts-image {
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-section .contacts-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 15rem;
+  margin-left: 1rem;
+}
+
+.email-cv {
+  font-weight: bold;
+  display: flex;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.email-cv img {
+  margin-right: 1rem;
+  width: 3rem;
+}
+
+.email-cv p {
+  transition: color 0.3s ease-in-out;
   color: white;
 }
 
-.contacts-section a div {
-  display: flex;
-  flex-direction: column;
+.email-cv p:hover {
+  color: rgb(72, 202, 228);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .contacts-section {
+    flex-direction: column;
+  }
 }
