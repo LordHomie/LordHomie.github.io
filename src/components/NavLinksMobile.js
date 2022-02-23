@@ -1,4 +1,6 @@
+import Backdrop from "./Modal/Backdrop";
 import classes from "./NavLinksMobile.module.css";
+import SocialMediaFooter from "./SocialMediaFooter";
 
 const NavLinksMobile = (props) => {
   const isDropdownBtnState = props.onShowNavLinksMobile;
@@ -9,6 +11,9 @@ const NavLinksMobile = (props) => {
         isDropdownBtnState ? classes["navLinks-mobileContent"] : ""
       }`}
     >
+      <div className={classes["social-media"]}>
+        <SocialMediaFooter />
+      </div>
       <div>
         <h3>Home</h3>
       </div>
@@ -21,6 +26,7 @@ const NavLinksMobile = (props) => {
       <div>
         <h3>Contact</h3>
       </div>
+      {isDropdownBtnState && <Backdrop onClose={props.onClose} />}
     </section>
   );
 };

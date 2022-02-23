@@ -1,7 +1,10 @@
+.animation {
+  animation: home-appear 1s ease-out forwards;
+}
+
 .home {
   display: flex;
   justify-content: space-evenly;
-  animation: home-appear 1s ease-out forwards;
   padding-bottom: 10.5rem;
 }
 
@@ -73,6 +76,12 @@
 @media (max-width: 500px) {
   .image-section {
     margin-top: 4rem;
+  }
+  .intro {
+    margin-top: 4rem;
+  }
+  .home img {
+    width: 15rem;
   }
 }
 
