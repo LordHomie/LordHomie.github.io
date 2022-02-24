@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  color: #03045e;
   margin-bottom: 4rem;
 }
 
@@ -10,6 +9,7 @@
   cursor: pointer;
   margin-left: 3.5rem;
   transition: color 0.3s ease-in-out;
+  color: #03045e;
 }
 
 .headerTitle:hover {
@@ -24,8 +24,13 @@
   margin-right: 3.5rem;
 }
 
-.navLinks div {
+.navLinks a {
+  text-decoration: none;
+  color: #03045e;
   cursor: pointer;
+}
+
+.navLinks div {
   padding: 0 0.5rem;
   border-radius: 15px;
   transition: background-color 0.3s ease-in-out;
@@ -37,6 +42,10 @@
 
 .dropdown-btn {
   display: none;
+}
+
+.rotate-btn {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 752px) {

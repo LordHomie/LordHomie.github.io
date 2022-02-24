@@ -1,14 +1,20 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import LordhomiePicture from "../../assets/lordhomie.png";
 import Button from "../UI/Button";
 import PositionModal from "../Modal/PositionModal";
 import Contacts from "../Contact/Contacts";
+import ComponentContext from "../../store/component-context";
 
 import classes from "./Home.module.css";
 
-const Home = () => {
+const Home = (props) => {
   const position = "Front-End";
   const text = "Developer";
+
+  const componentNameCtx = useContext(ComponentContext);
+  Home.displayName = "Home";
+  const componentIdentifier = Home.displayName;
+  componentNameCtx.componentNameFunction(componentIdentifier);
 
   return (
     <Fragment>
