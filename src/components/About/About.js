@@ -8,6 +8,24 @@ import locationHovered from "../../assets/location-hover.png";
 
 import classes from "./About.module.css";
 
+import Carousel from "../Carousel/Carousel";
+import CarouselItem from "../Carousel/CarouselItem";
+import chickens from "../../assets/carousel-imgs/chickens.jpg";
+import home from "../../assets/carousel-imgs/home.jpg";
+
+const carouselArr = [
+  {
+    id: "i1",
+    img: chickens,
+    txt: "Hi, I'm a chicken! ",
+  },
+  {
+    id: "i2",
+    img: home,
+    txt: "This is my home!",
+  },
+];
+
 const About = () => {
   const componentNameCtx = useContext(ComponentContext);
   About.displayName = "About";
@@ -54,6 +72,14 @@ const About = () => {
           <img src={LordHomieImg} alt="Me at the Red Square" />
         </div>
       </section>
+
+      {/* <Carousel>
+        <ul>
+          {carouselArr.map((item) => (
+            <CarouselItem key={item.id} txt={item.txt} img={item.img} />
+          ))}
+        </ul>
+      </Carousel> */}
 
       <Contacts />
     </Fragment>

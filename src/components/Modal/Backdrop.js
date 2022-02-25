@@ -1,16 +1,22 @@
-import classes from "./Backdrop.module.css";
-import { Fragment } from "react";
 import ReactDOM from "react-dom";
+import { Fragment, useContext } from "react";
+import ComponentContext from "../../store/component-context";
 
-const BackDropElement = (props) => {
-  return <div className={classes.backdrop} onClick={props.onCloseBackdrop} />;
+import classes from "./Backdrop.module.css";
+
+const BackDropElement = () => {
+  const componentCtx = useContext(ComponentContext);
+
+  return (
+    <div className={classes.backdrop} onClick={componentCtx.onCloseDropdown} />
+  );
 };
 
 const Backdrop = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <BackDropElement onCloseBackdrop={props.onClose} />,
+        <BackDropElement />,
         document.getElementById("backDrop-root")
       )}
     </Fragment>

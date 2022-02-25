@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext } from "react";
+import { Fragment, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import NavLinksMobile from "./NavLinksMobile";
 import ComponentContext from "../store/component-context";
@@ -7,31 +7,14 @@ import classes from "./Header.module.css";
 import openMenu from "../assets/openMenu.png";
 
 const Header = (props) => {
-  const componentNameCtx = useContext(ComponentContext);
+  const componentCtx = useContext(ComponentContext);
 
   let navigate = useNavigate();
   const homePageHandler = () => {
-    if (componentNameCtx.componentNameVar === "Home") {
+    if (componentCtx.componentNameVar === "Home") {
       return;
     }
     navigate("/");
-  };
-
-  const [dropdownBtnState, setDropdownBtnDtate] = useState(false);
-
-  const onCloseDropdown = () => {
-    setDropdownBtnDtate(false);
-  };
-  const onShowDropdown = () => {
-    setDropdownBtnDtate(true);
-  };
-
-  const dropdownBtnHandler = () => {
-    if (dropdownBtnState) {
-      onCloseDropdown();
-      return;
-    }
-    onShowDropdown();
   };
 
   return (
@@ -42,8 +25,6 @@ const Header = (props) => {
           aboutPage={props.aboutPage}
           portfolioPage={props.portfolioPage}
           contactPage={props.contactPage}
-          onShowNavLinksMobile={dropdownBtnState}
-          onClose={onCloseDropdown}
         />
         <div className={classes.headerTitle}>
           <h1 onClick={homePageHandler}>LordHomie</h1>
@@ -66,8 +47,10 @@ const Header = (props) => {
           <img
             src={openMenu}
             alt="navbar menu button"
-            onClick={dropdownBtnHandler}
-            className={dropdownBtnState ? classes["rotate-btn"] : ""}
+            onClick={componentCtx.dropdownBtnHandler}
+            className={
+              componentCtx.dropdownBtnState ? classes["rotate-btn"] : ""
+            }
           />
         </div>
       </div>

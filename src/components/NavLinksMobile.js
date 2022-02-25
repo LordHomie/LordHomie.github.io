@@ -1,9 +1,14 @@
+import { useContext } from "react";
+
+import ComponentContext from "../store/component-context";
 import Backdrop from "./Modal/Backdrop";
 import classes from "./NavLinksMobile.module.css";
 import SocialMediaFooter from "./SocialMediaFooter";
 
 const NavLinksMobile = (props) => {
-  const isDropdownBtnState = props.onShowNavLinksMobile;
+  const componentCtx = useContext(ComponentContext);
+
+  const isDropdownBtnState = componentCtx.dropdownBtnState;
   return (
     <section
       className={`${classes.hide} ${
@@ -25,7 +30,7 @@ const NavLinksMobile = (props) => {
       <div>
         <h3>{props.contactPage}</h3>
       </div>
-      {isDropdownBtnState && <Backdrop onClose={props.onClose} />}
+      {isDropdownBtnState && <Backdrop />}
     </section>
   );
 };

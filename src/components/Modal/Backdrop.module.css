@@ -9,6 +9,12 @@
   animation: backdrop-appear 0.3s ease-out forwards;
 }
 
+@media (min-width: 501px) {
+  .backdrop {
+    display: none;
+  }
+}
+
 @keyframes backdrop-appear {
   from {
     opacity: 0;

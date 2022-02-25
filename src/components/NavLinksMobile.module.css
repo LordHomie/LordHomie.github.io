@@ -31,6 +31,12 @@
   border-bottom: 3px solid #03045e;
 }
 
+@media (min-width: 501px) {
+  .navLinks-mobileContent {
+    display: none;
+  }
+}
+
 @keyframes navLinks-appear {
   from {
     opacity: 0;

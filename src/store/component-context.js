@@ -1,24 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ComponentContext = React.createContext({
   componentNameFunction: () => {},
   componentName: "",
+  dropdownBtnState: false,
+  dropdownBtnHandler: () => {},
+  onCloseDropdown: () => {},
 });
 
 export const ComponentContextProvider = (props) => {
   const [componentName, setComponentName] = useState("");
-
   const componentNameHandler = (name) => {
     setTimeout(() => {
       setComponentName(name);
     }, 100);
   };
 
+  const [dropdownBtnState, setDropdownBtnDtate] = useState(false);
+  const onCloseDropdown = () => {
+    setDropdownBtnDtate(false);
+  };
+
+  const onShowDropdown = () => {
+    setDropdownBtnDtate(true);
+  };
+
+  const dropdownBtnHandler = () => {
+    if (dropdownBtnState) {
+      onCloseDropdown();
+      return;
+    }
+    onShowDropdown();
+  };
+
+  useEffect(() => {
+    if (componentName) {
+      onCloseDropdown();
+    }
+  }, [componentName]);
+
   return (
     <ComponentContext.Provider
       value={{
         componentNameFunction: componentNameHandler,
         componentNameVar: componentName,
+        dropdownBtnState: dropdownBtnState,
+        dropdownBtnHandler: dropdownBtnHandler,
+        onCloseDropdown: onCloseDropdown,
       }}
     >
       {props.children}
