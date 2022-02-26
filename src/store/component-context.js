@@ -36,6 +36,10 @@ export const ComponentContextProvider = (props) => {
   useEffect(() => {
     if (componentName) {
       onCloseDropdown();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }, [componentName]);
 

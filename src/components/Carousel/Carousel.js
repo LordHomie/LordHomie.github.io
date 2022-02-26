@@ -8,12 +8,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/mousewheel";
 
 import "swiper/css/bundle";
 import "./Carousel.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Mousewheel, Autoplay, Pagination, Navigation } from "swiper";
 
 const Carousel = (props) => {
   return (
@@ -21,15 +22,20 @@ const Carousel = (props) => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
+        mousewheel={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Mousewheel, Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {props.arr.map((item) => (
+        {props.carouselArr.map((item) => (
           <SwiperSlide key={item.id}>
             <img src={item.img} alt="slide preview" />
             <h2>{item.title}</h2>

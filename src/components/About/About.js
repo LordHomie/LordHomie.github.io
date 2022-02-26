@@ -1,6 +1,8 @@
 import { Fragment, useContext, useState } from "react";
 import ComponentContext from "../../store/component-context";
 import Contacts from "../Contact/Contacts";
+import CarouselsWrapper from "../Carousel/CarouselsWrapper";
+import Carousel from "../Carousel/Carousel";
 
 import LordHomieImg from "../../assets/lordhomie2.jpg";
 import location from "../../assets/location.png";
@@ -8,8 +10,6 @@ import locationHovered from "../../assets/location-hover.png";
 
 import classes from "./About.module.css";
 
-import CarouselsWrapper from "../Carousel/CarouselsWrapper";
-import Carousel from "../Carousel/Carousel";
 import teamwork from "../../assets/carousel-imgs/teamwork.jpg";
 import resultsOrientation from "../../assets/carousel-imgs/results-orientation.jpg";
 
@@ -79,8 +79,8 @@ const About = () => {
 
       <Contacts />
       <CarouselsWrapper>
-        <Carousel arr={carouselArr}></Carousel>
-        <Carousel arr={carouselArr}></Carousel>
+        <Carousel carouselArr={carouselArr}></Carousel>
+        <Carousel carouselArr={carouselArr}></Carousel>
       </CarouselsWrapper>
     </Fragment>
   );
