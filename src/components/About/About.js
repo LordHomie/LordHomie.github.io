@@ -8,21 +8,25 @@ import locationHovered from "../../assets/location-hover.png";
 
 import classes from "./About.module.css";
 
+import CarouselsWrapper from "../Carousel/CarouselsWrapper";
 import Carousel from "../Carousel/Carousel";
-import CarouselItem from "../Carousel/CarouselItem";
-import chickens from "../../assets/carousel-imgs/chickens.jpg";
-import home from "../../assets/carousel-imgs/home.jpg";
+import teamwork from "../../assets/carousel-imgs/teamwork.jpg";
+import resultsOrientation from "../../assets/carousel-imgs/results-orientation.jpg";
 
 const carouselArr = [
   {
     id: "i1",
-    img: chickens,
-    txt: "Hi, I'm a chicken! ",
+    img: teamwork,
+    title: "Teamwork",
+    parag:
+      "Teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability.",
   },
   {
     id: "i2",
-    img: home,
-    txt: "This is my home!",
+    img: resultsOrientation,
+    title: "Results Orientation",
+    parag:
+      "Success is never an accident; it is always a result of goal-oriented, diligent actions.",
   },
 ];
 
@@ -73,15 +77,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* <Carousel>
-        <ul>
-          {carouselArr.map((item) => (
-            <CarouselItem key={item.id} txt={item.txt} img={item.img} />
-          ))}
-        </ul>
-      </Carousel> */}
-
       <Contacts />
+      <CarouselsWrapper>
+        <Carousel arr={carouselArr}></Carousel>
+        <Carousel arr={carouselArr}></Carousel>
+      </CarouselsWrapper>
     </Fragment>
   );
 };
