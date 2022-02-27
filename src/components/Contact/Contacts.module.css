@@ -5,63 +5,8 @@
   flex-wrap: wrap;
 }
 
-.link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  text-decoration: none;
-  color: white;
-  margin-left: 1.5rem;
-}
-
-.link h3 {
-  margin-bottom: 0;
-}
-
-.link p {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
-.contacts-section .contacts-image {
-  width: 4rem;
-  display: flex;
-  justify-content: center;
-}
-
-.contacts-section .contacts-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 15rem;
-  margin-left: 1rem;
-}
-
 .email-cv-content a {
   text-decoration: none;
-}
-
-.email-cv {
-  font-weight: bold;
-  display: flex;
-  margin-left: 1.5rem;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.email-cv img {
-  margin-right: 1rem;
-  width: 3rem;
-}
-
-.email-cv p {
-  color: white;
-}
-
-.text-hover p {
-  color: #48cae4;
 }
 
 @media (min-width: 500px) and (max-width: 713px) {

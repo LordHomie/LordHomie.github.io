@@ -7,7 +7,7 @@ import ComponentContext from "../../store/component-context";
 
 import classes from "./Home.module.css";
 
-const Home = (props) => {
+const Home = () => {
   const position = "Front-End";
   const text = "Developer";
 
