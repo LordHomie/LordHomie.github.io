@@ -22,9 +22,9 @@ const Carousel = (props) => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        mousewheel={true}
+        mousewheel={false}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}

@@ -55,6 +55,16 @@
   font-weight: bold;
 }
 
+.about-parag a {
+  color: #03045e;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.about-parag a:hover {
+  color: #00b4d8;
+}
+
 .about-location {
   display: flex;
   justify-content: center;
@@ -77,6 +87,21 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.carousels-section {
+  background-color: #03045e;
+  padding-top: 1rem;
+}
+
+.carousels-section h3 {
+  margin: 0;
+  padding: 1.5rem 1rem 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  border-top: 3px solid #00b4d8;
 }
 
 @media (max-width: 1400px) {
@@ -129,6 +154,9 @@ ul {
   }
   .about-right-content img {
     width: 90%;
+  }
+  .carousels-section h3 {
+    font-size: 1rem;
   }
 }
 
