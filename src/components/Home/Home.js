@@ -1,4 +1,6 @@
 import { Fragment, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import LordhomiePicture from "../../assets/lordhomie.png";
 import Button from "../UI/Button";
 import PositionModal from "../Modal/PositionModal";
@@ -10,6 +12,11 @@ import classes from "./Home.module.css";
 const Home = () => {
   const position = "Front-End";
   const text = "Developer";
+
+  const navigate = useNavigate();
+  const navigateToContactHandler = () => {
+    navigate("/contact");
+  };
 
   const componentNameCtx = useContext(ComponentContext);
   Home.displayName = "Home";
@@ -27,7 +34,7 @@ const Home = () => {
             Hi, I'm <span>Mohamad</span>. My creativity allows me to build
             experiences & interfaces.
           </div>
-          <Button>Contact me</Button>
+          <Button onClick={navigateToContactHandler}>Contact me</Button>
         </section>
         <PositionModal
           animationStyle={classes.animation}
