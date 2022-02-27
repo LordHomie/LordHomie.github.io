@@ -109,7 +109,10 @@ const About = () => {
               I'm Mohamad Abo Alnaser, a 23 years old
               <span> Front-end Developer</span> and <span>Youtuber</span>. Also,
               a Computer Science<span> student</span> at{" "}
-              <a href="https://mipt.ru/">MIPT</a>.
+              <a href="https://mipt.ru/" target="_blank" rel="noreferrer">
+                MIPT
+              </a>
+              .
             </p>
             <p className={classes["about-parag"]}>
               My creativity allows me to build user interfaces, based on human

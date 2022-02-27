@@ -155,9 +155,6 @@ ul {
   .about-right-content img {
     width: 90%;
   }
-  .carousels-section h3 {
-    font-size: 1rem;
-  }
 }
 
 @keyframes about-appear {
