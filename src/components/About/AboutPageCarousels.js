@@ -80,8 +80,14 @@ const AboutPageCarousels = (props) => {
     <section className={classes["carousels-section"]}>
       <h3>A brief of my skills & experience</h3>
       <CarouselsWrapper>
-        <Carousel carouselArr={skillsArr}></Carousel>
-        <Carousel carouselArr={experienceArr}></Carousel>
+        <Carousel
+          carouselArr={skillsArr}
+          slidesPerView={props.slidesPerView}
+        ></Carousel>
+        <Carousel
+          carouselArr={experienceArr}
+          slidesPerView={props.slidesPerView}
+        ></Carousel>
       </CarouselsWrapper>
     </section>
   );

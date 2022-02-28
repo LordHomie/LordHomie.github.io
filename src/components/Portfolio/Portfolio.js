@@ -1,6 +1,7 @@
 import { Fragment, useContext } from "react";
 import ComponentContext from "../../store/component-context";
 import Contacts from "../Contact/Contacts";
+// import PortfolioPageCarousels from "./PortfolioPageCarousels";
 
 const Portfolio = () => {
   const componentNameCtx = useContext(ComponentContext);
@@ -10,7 +11,8 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      <h1>Portfolio component</h1>
+      <h1>Hard-Skills & Experiences</h1>
+      {/* <PortfolioPageCarousels slidesPerView={2} /> */}
       <Contacts />
     </Fragment>
   );

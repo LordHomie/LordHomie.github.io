@@ -20,7 +20,9 @@ const Carousel = (props) => {
   return (
     <Fragment>
       <Swiper
-        slidesPerView={1}
+        className={`${"mySwiper"} ${props.swiperClass}`}
+        style={{ width: props.width }}
+        slidesPerView={props.slidesPerView}
         spaceBetween={30}
         mousewheel={false}
         autoplay={{
@@ -33,7 +35,6 @@ const Carousel = (props) => {
         }}
         navigation={true}
         modules={[Mousewheel, Autoplay, Pagination, Navigation]}
-        className="mySwiper"
       >
         {props.carouselArr.map((item) => (
           <SwiperSlide key={item.id}>

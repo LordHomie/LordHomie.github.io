@@ -62,7 +62,7 @@ const About = () => {
       </section>
 
       <Contacts />
-      <AboutPageCarousels />
+      <AboutPageCarousels slidesPerView={1} />
     </Fragment>
   );
 };
