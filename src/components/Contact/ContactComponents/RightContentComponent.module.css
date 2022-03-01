@@ -43,6 +43,10 @@
   margin-top: 0;
 }
 
+.hide {
+  display: none;
+}
+
 @media (max-width: 1030px) {
   .right-content {
     width: 90%;
