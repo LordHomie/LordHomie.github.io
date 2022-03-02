@@ -1,8 +1,10 @@
 import { Fragment, useState, useReducer, useEffect, useRef } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import TextArea from "../../UI/TextArea";
 import FormSent from "./FormSent";
+import Formik from "./Formik";
 
 import classes from "./RightContentComponent.module.css";
 
@@ -115,6 +117,8 @@ const RightContentComponent = () => {
   const emailInputRef = useRef();
   const textAreaInputRef = useRef();
 
+  const [sendFormState, setSendFormState] = useForm("contactMe");
+
   const formSubmitHandler = (event) => {
     event.preventDefault();
     if (formIsValid) {
@@ -139,38 +143,68 @@ const RightContentComponent = () => {
         }`}
       >
         <h4 className={classes["form-title"]}>Send me a message</h4>
-        <form onSubmit={formSubmitHandler}>
-          <Input
-            ref={nameInputRef}
-            type="text"
-            placeholder="Name..."
-            value={nameState.value}
-            onChange={nameChangeHandler}
-          />
-          <Input
-            ref={subjectInputRef}
-            type="text"
-            placeholder="Subject..."
-            value={subjectState.value}
-            onChange={subjectChangeHandler}
-          />
-          <Input
-            ref={emailInputRef}
-            type="email"
-            placeholder="Email..."
-            value={emailState.value}
-            onChange={emailChangeHandler}
-          />
-          <TextArea
-            ref={textAreaInputRef}
-            rows="4"
-            cols="33"
-            placeholder="Tell me about your project ideas..."
-            value={textAreaState.value}
-            onChange={textAreaChangeHandler}
-          />
-          <Button className={classes["contact-button"]}>Send message</Button>
-        </form>
+        <Formik onSubmit={formSubmitHandler}>
+          <form onSubmit={setSendFormState}>
+            <ValidationError
+              style={{ color: "red" }}
+              field="name"
+              prefix="Name"
+              errors={sendFormState.errors}
+            />
+            <Input
+              ref={nameInputRef}
+              type="text"
+              name="name"
+              placeholder="Name..."
+              value={nameState.value}
+              onChange={nameChangeHandler}
+            />
+            <ValidationError
+              style={{ color: "red" }}
+              field="subject"
+              prefix="Subject"
+              errors={sendFormState.errors}
+            />
+            <Input
+              ref={subjectInputRef}
+              type="text"
+              name="subject"
+              placeholder="Subject..."
+              value={subjectState.value}
+              onChange={subjectChangeHandler}
+            />
+            <ValidationError
+              style={{ color: "red" }}
+              field="email"
+              prefix="Email"
+              errors={sendFormState.errors}
+            />
+            <Input
+              ref={emailInputRef}
+              type="email"
+              name="email"
+              placeholder="Email..."
+              value={emailState.value}
+              onChange={emailChangeHandler}
+            />
+            <ValidationError
+              style={{ color: "red" }}
+              field="message"
+              prefix="Message"
+              errors={sendFormState.errors}
+            />
+            <TextArea
+              ref={textAreaInputRef}
+              rows="4"
+              cols="33"
+              name="message"
+              placeholder="Tell me about your project ideas..."
+              value={textAreaState.value}
+              onChange={textAreaChangeHandler}
+            />
+            <Button className={classes["contact-button"]}>Send message</Button>
+          </form>
+        </Formik>
       </section>
       <FormSent
         isSentIconHidden={isSentIconHidden}

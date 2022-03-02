@@ -19,6 +19,7 @@ const TextArea = React.forwardRef((props, ref) => {
         ref={textAreaRef}
         rows={props.rows}
         cols={props.cols}
+        name={props.name}
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}

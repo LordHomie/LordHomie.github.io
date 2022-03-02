@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { FormspreeProvider } from "@formspree/react";
 import ComponentContext from "../../store/component-context";
 import LeftComponentComponent from "./ContactComponents/LeftComponentComponent";
 import RightContentComponent from "./ContactComponents/RightContentComponent";
@@ -14,7 +15,9 @@ const Contact = () => {
   return (
     <div className={`${classes.contact} ${classes.animation}`}>
       <LeftComponentComponent />
-      <RightContentComponent />
+      <FormspreeProvider project="1889151648471710739">
+        <RightContentComponent />
+      </FormspreeProvider>
     </div>
   );
 };
