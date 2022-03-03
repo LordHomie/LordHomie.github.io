@@ -3,51 +3,94 @@ import Carousel from "../Carousel/Carousel";
 
 import classes from "./PortfolioPageCarousels.module.css";
 
-import teamwork from "../../assets/carousel-imgs/teamwork.jpg";
-import resultsOrientation from "../../assets/carousel-imgs/results-orientation.jpg";
-import timeManagement from "../../assets/carousel-imgs/time-management.webp";
-import problemSolving from "../../assets/carousel-imgs/problem-solving.jpg";
+import javascript from "../../assets/carousel-imgs/skills-imgs/javascript.jpg";
+import htmlImg from "../../assets/carousel-imgs/skills-imgs/html-img.png";
+import css from "../../assets/carousel-imgs/skills-imgs/css3.png";
+import react from "../../assets/carousel-imgs/skills-imgs/react.png";
+import bootstrap from "../../assets/carousel-imgs/skills-imgs/bootstrap.png";
+import python from "../../assets/carousel-imgs/skills-imgs/python.jpg";
+import flask from "../../assets/carousel-imgs/skills-imgs/flask.png";
+import cPlusPlus from "../../assets/carousel-imgs/skills-imgs/cplusplus.png";
+import java from "../../assets/carousel-imgs/skills-imgs/java.jpg";
+import databases from "../../assets/carousel-imgs/skills-imgs/databases.jpg";
+import github from "../../assets/carousel-imgs/skills-imgs/github.jpg";
+import docker from "../../assets/carousel-imgs/skills-imgs/docker.jpg";
 
 const hardSkillsArr = [
   {
     id: "i1",
-    img: teamwork,
-    title: "Teamwork",
-    parag:
-      "I'm able to work well in a team, collaborating with my colleagues to achieve our goals.",
+    img: javascript,
+    title: "JavaScript (ES6+)",
   },
   {
     id: "i2",
-    img: resultsOrientation,
-    title: "Results Orientation",
-    parag:
-      "Constantly focused on the goals. I'm used to work under pressure and getting the work done to meet deadlines.",
+    img: react,
+    title: "React",
   },
   {
     id: "i3",
-    img: timeManagement,
-    title: "Time Management",
-    parag:
-      "Very good at managing my time between work, studies and other activities as I have been able to manage my time well since high school.",
+    img: htmlImg,
+    title: "HTML5",
   },
   {
     id: "i4",
-    img: problemSolving,
-    title: "Problem Solving",
-    parag:
-      "Always dedicated to solving problems no matter how much time it takes to get solved.",
+    img: css,
+    title: "CSS3",
+  },
+  {
+    id: "i5",
+    img: bootstrap,
+    title: "Bootstrap",
+  },
+  {
+    id: "i6",
+    img: python,
+    title: "Python",
+  },
+  {
+    id: "i7",
+    img: flask,
+    title: "Flask Framework",
+  },
+  {
+    id: "i8",
+    img: cPlusPlus,
+    title: "C++",
+  },
+  {
+    id: "i9",
+    img: java,
+    title: "Java",
+  },
+  {
+    id: "i10",
+    img: databases,
+    title: "Databases",
+  },
+  {
+    id: "i11",
+    img: github,
+    title: "Github",
+  },
+  {
+    id: "i12",
+    img: docker,
+    title: "Docker",
   },
 ];
 
 const PortfolioPageCarousels = (props) => {
   return (
     <section className={classes["carousels-section"]}>
+      <h3>Hard-Skills & Experiences</h3>
       <CarouselsWrapper>
         <Carousel
           carouselArr={hardSkillsArr}
           slidesPerView={props.slidesPerView}
           swiperClass={classes.swiper}
-          width={"80%"}
+          width={"100%"}
+          imgWidth={"80%"}
+          spaceBetween={10}
         ></Carousel>
       </CarouselsWrapper>
     </section>

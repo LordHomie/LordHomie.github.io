@@ -1,3 +1,43 @@
 .swiper {
-  width: 85%;
+  background-color: rgba(184, 192, 255, 25%);
+  height: 50%;
+  padding: 2rem 2rem 0 2rem;
+  margin-bottom: 4rem;
+  max-width: 90%;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  margin-top: 6rem;
+}
+
+.carousels-section {
+  animation: about-appear 1s ease-out forwards;
+}
+
+.carousels-section h3 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #03045e;
+}
+
+@media (max-width: 1013px) {
+  .swiper {
+    /* padding-right: 0;
+    padding-left: 0; */
+  }
+}
+
+@keyframes about-appear {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

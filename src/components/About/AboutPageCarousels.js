@@ -83,10 +83,12 @@ const AboutPageCarousels = (props) => {
         <Carousel
           carouselArr={skillsArr}
           slidesPerView={props.slidesPerView}
+          spaceBetween={30}
         ></Carousel>
         <Carousel
           carouselArr={experienceArr}
           slidesPerView={props.slidesPerView}
+          spaceBetween={30}
         ></Carousel>
       </CarouselsWrapper>
     </section>

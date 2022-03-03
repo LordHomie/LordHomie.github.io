@@ -23,7 +23,8 @@ const Carousel = (props) => {
         className={`${"mySwiper"} ${props.swiperClass}`}
         style={{ width: props.width }}
         slidesPerView={props.slidesPerView}
-        spaceBetween={30}
+        slidesPerGroup={props.slidesPerView}
+        spaceBetween={props.spaceBetween}
         mousewheel={false}
         autoplay={{
           delay: 5000,
@@ -38,7 +39,12 @@ const Carousel = (props) => {
       >
         {props.carouselArr.map((item) => (
           <SwiperSlide key={item.id}>
-            <img src={item.img} alt="slide preview" />
+            <img
+              src={item.img}
+              alt="slide preview"
+              className="swiper-slide-img"
+              style={{ width: props.imgWidth }}
+            />
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
           </SwiperSlide>
