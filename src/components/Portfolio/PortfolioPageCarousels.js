@@ -82,7 +82,7 @@ const hardSkillsArr = [
 const PortfolioPageCarousels = (props) => {
   return (
     <section className={classes["carousels-section"]}>
-      <h3>Hard-Skills & Experiences</h3>
+      <h3 className={classes["portfolio-header"]}>Hard-Skills & Experiences</h3>
       <CarouselsWrapper>
         <Carousel
           carouselArr={hardSkillsArr}

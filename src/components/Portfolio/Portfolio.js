@@ -3,7 +3,7 @@ import ComponentContext from "../../store/component-context";
 import Contacts from "../Contact/Contacts";
 import PortfolioPageCarousels from "./PortfolioPageCarousels";
 
-import classes from "./Portfolio.module.css";
+// import classes from "./Portfolio.module.css";
 
 const Portfolio = () => {
   const componentNameCtx = useContext(ComponentContext);
@@ -50,11 +50,7 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      {/* <section className={classes.portfolio}>
-        <h1>Hard-Skills & Experiences</h1>
-      </section> */}
       <PortfolioPageCarousels slidesPerView={numOfSlides} />
-
       <Contacts />
     </Fragment>
   );

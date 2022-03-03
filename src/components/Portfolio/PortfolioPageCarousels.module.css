@@ -6,16 +6,11 @@
   max-width: 90%;
 }
 
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
-  margin-top: 6rem;
-}
-
 .carousels-section {
   animation: about-appear 1s ease-out forwards;
 }
 
-.carousels-section h3 {
+.portfolio-header {
   margin: 0;
   font-size: 2rem;
   text-align: center;
@@ -23,10 +18,23 @@
   color: #03045e;
 }
 
-@media (max-width: 1013px) {
+@media (max-width: 768px) {
+  .portfolio-header {
+    font-size: 1.5rem;
+  }
   .swiper {
-    /* padding-right: 0;
-    padding-left: 0; */
+    padding: 1rem 0 0 0;
+  }
+  .swiper h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio-header {
+    padding: 0 1rem;
+    margin-top: 3rem;
+    font-size: 1.3rem;
   }
 }
 

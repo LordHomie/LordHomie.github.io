@@ -45,6 +45,7 @@
   color: #03045e;
   font-weight: bold;
   padding: 0 1.3rem 0 1.3rem;
+  width: 70%;
 }
 
 .swiper-pagination div {
@@ -58,6 +59,7 @@
   height: 4rem;
   border-radius: 10px;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: translateY(5rem);
 }
 
 .swiper-button-next:hover,
@@ -85,7 +87,10 @@
     width: 100%;
   }
   .swiper-slide h2 {
-    width: 62%;
+    width: 60%;
+  }
+  .swiper-slide p {
+    width: 60%;
   }
 }
 
