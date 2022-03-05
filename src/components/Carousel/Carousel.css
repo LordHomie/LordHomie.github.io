@@ -73,6 +73,7 @@
 }
 
 .tags {
+  margin-top: 1rem;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
