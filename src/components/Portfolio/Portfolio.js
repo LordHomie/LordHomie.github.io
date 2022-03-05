@@ -11,7 +11,18 @@ const Portfolio = () => {
   const componentIdentifier = Portfolio.displayName;
   componentNameCtx.componentNameFunction(componentIdentifier);
 
-  const [numOfSlides, SetNumOfSlides] = useState(1);
+  let num;
+  if (window.innerWidth > 1440) {
+    num = 4;
+  } else if (window.innerWidth > 1024) {
+    num = 3;
+  } else if (window.innerWidth > 768) {
+    num = 2;
+  } else {
+    num = 1;
+  }
+
+  const [numOfSlides, SetNumOfSlides] = useState(num);
 
   const debounceResize = (handleResizeFunc) => {
     let timer;

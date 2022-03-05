@@ -72,6 +72,21 @@
   background-color: #00b4d8;
 }
 
+.tags {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  padding: 1rem;
+  margin: 0.6rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 @media (max-width: 1012px) {
   .swiper {
     width: 60%;
@@ -91,6 +106,13 @@
   }
   .swiper-slide p {
     width: 60%;
+  }
+  .tags {
+    max-width: 50%;
+  }
+  .tags span {
+    font-size: 0.9rem;
+    margin: 0.3rem;
   }
 }
 

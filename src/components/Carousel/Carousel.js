@@ -47,6 +47,7 @@ const Carousel = (props) => {
             />
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
+            <div className="tags">{item.tags}</div>
           </SwiperSlide>
         ))}
       </Swiper>
