@@ -230,7 +230,7 @@ const PortfolioPageCarousels = (props) => {
             slidesPerView={1}
             swiperClass={classes.swiperProjects}
             width={"100%"}
-            imgWidth={"80%"}
+            imgWidth={props.projectImgWidthLarge}
             spaceBetween={10}
           ></Carousel>
         </CarouselsWrapper>
