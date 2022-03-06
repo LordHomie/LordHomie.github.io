@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const App = () => {
   const homePage = <Link to="/">Home</Link>;
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>
