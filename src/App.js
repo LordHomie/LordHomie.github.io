@@ -15,7 +15,7 @@ const App = () => {
   const contactPage = <Link to="/contact">Contact</Link>;
 
   return (
-    <Router>
+    <Router basename="/">
       <Header
         homePage={homePage}
         aboutPage={aboutPage}
