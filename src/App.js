@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+/* 
+  I used HashRouter here instead of BrowserRouter because Github pages don't support the Cliet-Side Routing. So, when refreshing the
+  page, we'll get a 404 error but HashRouter will fix this problem.
+  Anyway, we don't have to do this when using a custom domain!
+*/
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 import Header from "./components/Header";
@@ -15,7 +20,7 @@ const App = () => {
   const contactPage = <Link to="/contact">Contact</Link>;
 
   return (
-    <Router basename="/">
+    <Router>
       <Header
         homePage={homePage}
         aboutPage={aboutPage}
