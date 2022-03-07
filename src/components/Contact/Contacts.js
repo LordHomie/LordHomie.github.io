@@ -6,6 +6,8 @@ import classes from "./Contacts.module.css";
 
 import instagramCircle from "../../assets/instagram-circle.png";
 import instagramCircleHovered from "../../assets/instagram-hover.png";
+import linkedinCircle from "../../assets/linkedin-circle.png";
+import linkedinCircleHovered from "../../assets/linkedin-hover.png";
 import youtubeCircle from "../../assets/youtube-circle.png";
 import youtubeCircleHovered from "../../assets/youtube-hover.png";
 import githubCircle from "../../assets/github-circle.png";
@@ -78,6 +80,18 @@ const Contacts = () => {
     setIsGithubTextHovered(false);
   };
 
+  let linkedinImg = linkedinCircle;
+  const [isLinkedinHovered, setIsLinkedinHovered] = useState(linkedinImg);
+  const [isLinkedintextHovered, setIsLinkedinTextHovered] = useState(false);
+  const linkedinHoverHandler = () => {
+    setIsLinkedinHovered(linkedinCircleHovered);
+    setIsLinkedinTextHovered(true);
+  };
+  const linkedinNoHoverHandler = () => {
+    setIsLinkedinHovered(linkedinImg);
+    setIsLinkedinTextHovered(false);
+  };
+
   return (
     <section className={classes["contacts-section"]}>
       <SocialMediaContactConfiguration
@@ -91,16 +105,6 @@ const Contacts = () => {
         username={"@LordHomie"}
       />
       <SocialMediaContactConfiguration
-        href={"https://www.youtube.com/c/babushkaboyz"}
-        onMouseOver={youtubeHoverHandler}
-        onMouseLeave={youtubeNoHoverHandler}
-        isTextHovered={isYoutubetextHovered}
-        textHover={"text-hover"}
-        src={isYoutubeHovered}
-        socialMediaName={"Youtube"}
-        username={"Babushka Boyz"}
-      />
-      <SocialMediaContactConfiguration
         href={"https://github.com/LordHomie/"}
         onMouseOver={githubHoverHandler}
         onMouseLeave={githubNoHoverHandler}
@@ -109,6 +113,26 @@ const Contacts = () => {
         src={isGithubHovered}
         socialMediaName={"Github"}
         username={"@LordHomie"}
+      />
+      <SocialMediaContactConfiguration
+        href={"https://www.linkedin.com/in/mohamad-abo-alnaser-63aa03233"}
+        onMouseOver={linkedinHoverHandler}
+        onMouseLeave={linkedinNoHoverHandler}
+        isTextHovered={isLinkedintextHovered}
+        textHover={"text-hover"}
+        src={isLinkedinHovered}
+        socialMediaName={"LinkedIn"}
+        username={"mohamad-abo-alnaser"}
+      />
+      <SocialMediaContactConfiguration
+        href={"https://www.youtube.com/c/babushkaboyz"}
+        onMouseOver={youtubeHoverHandler}
+        onMouseLeave={youtubeNoHoverHandler}
+        isTextHovered={isYoutubetextHovered}
+        textHover={"text-hover"}
+        src={isYoutubeHovered}
+        socialMediaName={"Youtube"}
+        username={"Babushka Boyz"}
       />
       <div className={classes["email-cv-content"]}>
         <EmailCvConfiguration
