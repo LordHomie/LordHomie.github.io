@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.42305506.css",
+    "main.js": "/static/js/main.95434698.js",
+    "static/media/foodmenu-project.gif": "/static/media/foodmenu-project.d258036fbddb5b5fab3c.gif",
+    "static/media/lordhomie.png": "/static/media/lordhomie.0ca906681c4a70ad3861.png",
+    "static/media/expenses-project.gif": "/static/media/expenses-project.73475684b17e94da249c.gif",
+    "static/media/bootstrap.png": "/static/media/bootstrap.71718aff33e340a860fb.png",
+    "static/media/languages.jpg": "/static/media/languages.f396f62b4172ce1fdead.jpg",
+    "static/media/lordhomie2.jpg": "/static/media/lordhomie2.ece80d99d0d0568fa800.jpg",
+    "static/media/russian-cv.pdf": "/static/media/russian-cv.571103f8e022d8a424b9.pdf",
+    "static/media/english-cv.pdf": "/static/media/english-cv.145180c4ee47d9030cbe.pdf",
+    "static/media/teamwork.jpg": "/static/media/teamwork.f078a26d90993061f69b.jpg",
+    "static/media/backend.jpg": "/static/media/backend.3404cd27ddc65244fe67.jpg",
+    "static/media/socialmedia-project.png": "/static/media/socialmedia-project.09d9a31efe98866cb068.png",
+    "static/media/youtube.jpg": "/static/media/youtube.e012ab6307e34eb37492.jpg",
+    "static/media/problem-solving.jpg": "/static/media/problem-solving.c6687d2279976ff5c724.jpg",
+    "static/media/weather-project.jpg": "/static/media/weather-project.dde5d27bd288e0c0916f.jpg",
+    "static/media/frontend.jpg": "/static/media/frontend.478edb017b8d95be49a0.jpg",
+    "static/media/results-orientation.jpg": "/static/media/results-orientation.575603fda6d4f4f035b7.jpg",
+    "static/media/moreprojects.jpg": "/static/media/moreprojects.dbac53b6ee265b52c8f9.jpg",
+    "static/media/databases.jpg": "/static/media/databases.7cc8a2bce6ca6bd6cc62.jpg",
+    "static/media/javascript.jpg": "/static/media/javascript.6b00a75989c9a9420c36.jpg",
+    "static/media/docker.jpg": "/static/media/docker.f7d8983ff9f22dc5a558.jpg",
+    "static/media/time-management.webp": "/static/media/time-management.8e6e9bc7e1f1c8cb6ec4.webp",
+    "static/media/java.jpg": "/static/media/java.68954713bd914300f101.jpg",
+    "static/media/flask.png": "/static/media/flask.a587e2edb6d99362cdd2.png",
+    "static/media/react.png": "/static/media/react.f04b5137788f282272fa.png",
+    "static/media/python.jpg": "/static/media/python.8cf916acf775f5698aa0.jpg",
+    "static/media/error-page-icon.png": "/static/media/error-page-icon.25ed5cbd8a89270dc81e.png",
+    "static/media/github.jpg": "/static/media/github.ab400c72fe296199bac2.jpg",
+    "static/media/form-sent.png": "/static/media/form-sent.11f37e2151da35db7a09.png",
+    "static/media/cplusplus.png": "/static/media/cplusplus.790fdc9542d8bb13b3fe.png",
+    "static/media/css3.png": "/static/media/css3.47f66951495662380bd0.png",
+    "index.html": "/index.html",
+    "main.42305506.css.map": "/static/css/main.42305506.css.map",
+    "main.95434698.js.map": "/static/js/main.95434698.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42305506.css",
+    "static/js/main.95434698.js"
+  ]
+}
