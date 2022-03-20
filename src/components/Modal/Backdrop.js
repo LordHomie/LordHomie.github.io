@@ -12,7 +12,7 @@ const BackDropElement = () => {
   );
 };
 
-const Backdrop = (props) => {
+const Backdrop = () => {
   return (
     <Fragment>
       {ReactDOM.createPortal(

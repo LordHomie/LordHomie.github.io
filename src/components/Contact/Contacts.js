@@ -17,7 +17,8 @@ import emailHovered from "../../assets/email-hover.png";
 import cv from "../../assets/cv.png";
 import cvHovered from "../../assets/cv-hover.png";
 
-import cvDocument from "../../assets/cv-document.pdf";
+import englishCV from "../../assets/english-cv.pdf";
+import russianCV from "../../assets/russian-cv.pdf";
 
 const Contacts = () => {
   let cvImg = cv;
@@ -144,7 +145,8 @@ const Contacts = () => {
           title={"Hamouda99@windowslive.com"}
         />
         <EmailCvConfiguration
-          href={cvDocument}
+          englishCV={englishCV}
+          russianCV={russianCV}
           onMouseOver={cvHoverHandler}
           onMouseLeave={cvNoHoverHandler}
           isTextHovered={isCvtextHovered}
